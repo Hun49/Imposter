@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-eerie {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+}
+
+.font-creepy {
+  font-family: 'Creepster', cursive;
+}
+
+.font-display {
+  font-family: 'Syne', -apple-system, sans-serif;
+}
+
+/* Custom subtle ambient glow */
+.creepy-glow {
+  text-shadow: 0 0 25px rgba(225, 29, 72, 0.35), 0 0 50px rgba(225, 29, 72, 0.2);
+}
+
+.dark .creepy-glow {
+  text-shadow: 0 0 35px rgba(244, 63, 94, 0.5), 0 0 70px rgba(225, 29, 72, 0.3);
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imposter-api",
+  "account_id": "7be15ff3754d5ce069e4358d52514684",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "imposter-db",
+      "database_id": "3277c716-9ced-4554-a792-102111321c56",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "RoomDO",
+        "name": "ROOM_DO"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["RoomDO"]
+    }
+  ],
+  "vars": {
+    "BETTER_AUTH_URL": "https://imposter-api.hun-wrk0966.workers.dev"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true
+}
